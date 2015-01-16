@@ -1,0 +1,29 @@
+<%= form_for(@ping) do |f| %>
+  <% if @ping.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ping.errors.count, "error") %> prohibited this ping from being saved:</h2>
+
+      <ul>
+      <% @ping.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :server %><br>
+    <%= f.text_field :server %>
+  </div>
+  <div class="field">
+    <%= f.label :player %><br>
+    <%= f.text_field :player %>
+  </div>
+  <div class="field">
+    <%= f.label :ping %><br>
+    <%= f.number_field :ping %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

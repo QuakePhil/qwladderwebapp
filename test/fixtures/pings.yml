@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  server: MyString
+  player: MyString
+  ping: 1
+
+two:
+  server: MyString
+  player: MyString
+  ping: 1

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  server: MyString
+  port: 1
+  name: MyString
+  description: MyString
+
+two:
+  server: MyString
+  port: 1
+  name: MyString
+  description: MyString

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Server:</strong>
+  <%= @ping.server %>
+</p>
+
+<p>
+  <strong>Player:</strong>
+  <%= @ping.player %>
+</p>
+
+<p>
+  <strong>Ping:</strong>
+  <%= @ping.ping %>
+</p>
+
+<%= link_to 'Edit', edit_ping_path(@ping) %> |
+<%= link_to 'Back', pings_path %>

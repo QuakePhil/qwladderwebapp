@@ -1,0 +1,33 @@
+<%= form_for(@ladder) do |f| %>
+  <% if @ladder.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ladder.errors.count, "error") %> prohibited this ladder from being saved:</h2>
+
+      <ul>
+      <% @ladder.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ladder %><br>
+    <%= f.text_field :ladder %>
+  </div>
+  <div class="field">
+    <%= f.label :player %><br>
+    <%= f.text_field :player %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br>
+    <%= f.text_field :status %>
+  </div>
+  <div class="field">
+    <%= f.label :result %><br>
+    <%= f.number_field :result %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

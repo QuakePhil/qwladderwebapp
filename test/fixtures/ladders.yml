@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ladder: MyString
+  player: MyString
+  status: MyString
+  result: 1
+
+two:
+  ladder: MyString
+  player: MyString
+  status: MyString
+  result: 1
