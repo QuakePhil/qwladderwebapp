@@ -8,7 +8,28 @@ Rails.application.routes.draw do
 
   #resources :ladders
   
+  #source: https://www.airpair.com/ruby-on-rails/posts/building-a-restful-api-in-a-rails-application
   
+  scope '/api' do
+    scope '/v1' do
+      scope '/serverlist' do
+        get '/' => 'api_servers#index'
+        post '/' => 'api_servers#create'
+        scope '/:name' do
+          get '/' => 'api_projects#show'
+          put '/' => 'api_projects#update'
+          scope '/todos' do
+            get '/' => 'api_todos#index'
+            post '/' => 'api_todos#create'
+            scope '/:todo_name' do
+              get '/' => 'api_todos#show'
+              put '/' => 'api_todos#update'
+            end
+          end
+        end
+      end
+    end
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
