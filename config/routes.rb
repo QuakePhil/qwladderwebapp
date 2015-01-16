@@ -1,9 +1,14 @@
 Rails.application.routes.draw do
-  resources :pings
+  root "application#index"
+  #resources :users
 
-  resources :servers
+  #resources :pings
 
-  resources :ladders
+  #resources :servers
+
+  #resources :ladders
+  
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
